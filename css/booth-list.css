@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Arial;
+}
+
+#wrapper {
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* ---- Booth List ---- */
+
+#booth-list {
+
+}
+
+.search {
+    font-size: 1.5em;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.sort {
+    display: inline-block;
+    background-color: teal;
+    font-size: 1.4em;
+    padding: 20px;
+    border-radius: 1em;
+    color: snow;
+}
+
+.list {
+    height: 40vh;
+    overflow-y: auto;
+}
+
+.list li {
+    list-style: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.list li:nth-child(2n) {
+    background-color: gainsboro;
+}
+
+
+/*-------- */

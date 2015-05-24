@@ -1,0 +1,28 @@
+body {
+    perspective:10000px;
+}
+
+#wrapper {
+    text-align: center;
+}
+
+#booth-list {
+    width: 50%;
+    height: 50%;
+    background-color: mediumaquamarine;
+    transform: rotateY(30deg);
+}
+
+#promotions {
+    width: 50%;
+    height: 90%;
+    background-color: blueviolet;
+    transform: rotateY(-30deg);
+    float: right;
+}
+
+#registration {
+    width: 50%;
+    height: 40%;
+    background-color: cornflowerblue;
+    transform: rotateY(30deg);
