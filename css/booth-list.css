@@ -4,12 +4,37 @@
 
 html, body {
     font-family: Arial;
+	font-size: 1.4em;
 }
 
 #wrapper {
     text-align: center;
     margin: 0 auto;
     width: 90%;
+}
+
+.hidden {
+	display: none;
+}
+
+#subpages {
+	width: 85%;
+	margin: 0 auto;
+}
+
+.submit {
+height: 2em;
+background-color: teal;
+color: snow;
+}
+
+button {
+	height: 2em;
+	width: 40%;
+	background-color: turquoise;
+	color: black;
+	font-size: 1.4em;
+	display: inline-block;
 }
 
 /* ---- Booth List ---- */
@@ -47,6 +72,5 @@ html, body {
 .list li:nth-child(2n) {
     background-color: gainsboro;
 }
-
 
 /*-------- */

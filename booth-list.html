@@ -3,7 +3,8 @@
         <title>List of Booths</title>
         <link rel = 'stylesheet' type = 'text/css' href = './css/booth-list.css' >
         <script src = './js/lib/list.js'></script>
-
+		<script src = "js/lib/classie/classie.js"></script>
+		
     </head>
 
     
@@ -12,7 +13,7 @@
 <div id = 'wrapper'>    
     <h1> List of Booths Page</h1>
     
-    <div id="booth-list">
+    <div id= "booth-list">
         <input class="search" placeholder = 'Search'/> <br/>
         <span class="sort" data-sort="name">Sort by name</span>
         <span class="sort" data-sort="category">Sort by category</span>
@@ -20,16 +21,40 @@
         <ul class="list"></ul>
     </div>
 </div>    
-    
+ 
+<div id = 'subpages'>
+ 
     <div id = 'booth-info'>
         <h1 id = 'booth-name'></h1>
         <p id = 'booth-bio'></p>
         <h2 id = 'booth-no'></h2>
+		<span id = 'navbar'>Test</span>
     </div>
     
-    <button>Home</button>
-    <button>Registration</button>
-    
+	<div id = 'mailing-list'>
+		<h1> Join our Mailing List </h1>
+		<p> Join our mailing list to gain access to the latest promotions! </p>
+		<input class = 'search' placeholder = 'Email address' />
+		<input class = 'search' placeholder = 'Name' />
+		<button class  = 'submit' >Subscribe </button>
+		<br /><br />
+	</div>
+	
+	<div id = 'registration'>
+		<h1> Register for Talks </h1>
+		<p> Register for talks here and receive an email 30 minutes before the talk! </p>
+		<input class = 'search' placeholder = 'Email address' />
+		<button class = 'submit'> Register </button>
+		<br /><br />
+		
+	</div>	
+	
+    <button onclick = "toggleVis('wrapper')">Home</button>
+	<button onclick = "toggleVis('mailing-list')">Mailing List</button>
+	<button onclick = "toggleVis('registration')">Registration</button>
+	
+ </div>
+ 
 </body>    
     
     <script src = './js/booth-list.js'></script> 

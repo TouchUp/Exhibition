@@ -1,5 +1,24 @@
 "use strict";
 
+var w = document.getElementById('subpages');
+var divs = w.querySelectorAll('div');
+
+function hide (n) {
+	classie.add(n, 'hidden');
+}
+Array.prototype.map.call(divs, hide);
+
+/*Code to show one element, and hide the other */
+
+function toggleVis (show) {
+	classie.refresh(document.getElementById('wrapper'), 'hidden');
+	var x = document.getElementById(show);
+	Array.prototype.map.call(divs, hide);
+	classie.remove(x, 'hidden');
+}
+
+/* Code for List.js */
+
 var options = {
     item: '<li onclick = "showInfo(this)"><h3 class="name"></h3><p class="category"></p></li>'
 };
@@ -19,6 +38,10 @@ var values = [
 var boothList = new List('booth-list', options, values);
 
 function showInfo(item) {
+		
+	//Shows the booth-info div
+	toggleVis('booth-info');
+
     var booth_name = item.childNodes[0].innerHTML;
     
     function getBooth(e) {
@@ -35,4 +58,7 @@ function showInfo(item) {
     document.getElementById('booth-name').innerHTML = booth_name;
     document.getElementById('booth-bio').innerHTML = booth[0].bio;
     document.getElementById('booth-no').innerHTML = 'Booth Number: ' + booth[0].no;
+	document.getElementById('navbar').innerHTML =  "<button onclick = 'toggleVis(" + '"wrapper"' + ")'> Booth List </button> ";
 }
+
+/* ------------------------ */
